@@ -1,0 +1,187 @@
+// global styles
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+//Nav-Bar 
+.nav{
+    z-index: 9999;
+    box-shadow: 0px 1px 1px rgba(0,0,0,0.4);
+}
+.nav-bar{
+    width: 98%;
+    height: 10vh;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.nav-logo{
+    flex:4 1 400px;
+
+    img{
+        width: 82px;
+    }
+}
+.nav-items{
+    flex: 1 1 200px;
+}
+
+.nav-ul{
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    li{
+        color: rgba(0,0,0,0.7);
+    }
+    span{
+        font-weight: 600;
+    }
+}
+
+.nav-btn{
+    padding: 0.5rem 1.4rem;
+    border-radius: 5px;
+    background-color: #CF2121;
+    color:white;
+    border: none;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+//Main 
+
+.hero{
+    min-height: 90vh;
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    width: 100vw;
+    background-color: #F8F8F8;
+}
+
+//Side section
+.side-section{
+    flex:1 1 200px;
+    form input{
+        width: 100%;
+        border: none;
+        background-color: #F0F0F0;
+        padding: 0.5rem;
+    }
+    form input:target{
+        border: none;
+    }
+}
+// .side-section-content{
+    
+// }
+.single-contact-card{
+    padding: 0.6rem;
+    border-right: 1px solid #D2D2D2;
+    border-bottom: 1px solid #D2D2D2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ffffff;
+
+    .card-content{
+        display: flex;
+        flex-direction: column;
+    }
+    span{
+        font-size: 0.8rem;
+    }
+}
+
+
+//Main section
+
+.main-section{
+    min-height: 90vh;
+    flex:8 1 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    
+}
+.partner-details{
+    min-width:1150px;
+
+    h2{
+        font-size: 1.2rem;
+        font-weight: 400;
+    }
+}
+.partner-card{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    border: 1px solid #eeeeee;
+    background-color: white;
+    
+}
+.cards{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 700px;
+
+    span{
+        color:rgb(104, 104, 104);
+    }
+}
+
+.call-btn{
+    background-color: #FFC351;
+    font-weight: 600;
+    font-size: 0.8rem;
+    border: none;
+    border-radius: 20px;
+    padding: 0.4rem 0.8rem;
+    cursor: pointer;
+}
+
+.stops-section{
+    width: 1150px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.card-part{
+    border: 1px solid #eeeeee;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    p{
+        font-size: 1rem;
+    }
+    span{
+        font-size: 0.8rem;
+        color: rgb(104, 104, 104);
+    }
+}
+
+
+
+
+//Responsive styling
+
+@media screen and (max-width:686px) {
+    // .nav-btn{
+    //     display:none;
+    // }
+}
