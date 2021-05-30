@@ -74,7 +74,7 @@ body{
         width: 100%;
         border: none;
         background-color: #F0F0F0;
-        padding: 0.5rem;
+        padding: 0.7rem;
     }
     form input:target{
         border: none;
@@ -91,14 +91,24 @@ body{
     align-items: center;
     justify-content: space-between;
     background-color: #ffffff;
-
+    
+    h4,h5{
+        font-weight: 600;
+    }
     .card-content{
         display: flex;
         flex-direction: column;
     }
     span{
         font-size: 0.8rem;
+        color:rgb(104, 104, 104);
     }
+    &:hover{
+        cursor: pointer;
+    }
+}
+.single-contact-card.active {
+    background-color:#FFF7EA;
 }
 
 

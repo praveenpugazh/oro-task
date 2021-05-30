@@ -102,7 +102,7 @@ body {
   width: 100%;
   border: none;
   background-color: #F0F0F0;
-  padding: 0.5rem;
+  padding: 0.7rem;
 }
 
 .side-section form input:target {
@@ -125,6 +125,10 @@ body {
   background-color: #ffffff;
 }
 
+.single-contact-card h4, .single-contact-card h5 {
+  font-weight: 600;
+}
+
 .single-contact-card .card-content {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -137,6 +141,15 @@ body {
 
 .single-contact-card span {
   font-size: 0.8rem;
+  color: #686868;
+}
+
+.single-contact-card:hover {
+  cursor: pointer;
+}
+
+.single-contact-card.active {
+  background-color: #FFF7EA;
 }
 
 .main-section {
