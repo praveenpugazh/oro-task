@@ -64,6 +64,7 @@ const contactCardDetails = datas.map((data) => {
   const contactCardParent = document.createElement("div");
   const contactCard = document.createElement("div");
   const arrowDiv = document.createElement("div");
+  const statusRound = document.createElement("span");
 
   //adding class names
   contactCardParent.classList.add("single-contact-card");
@@ -76,7 +77,7 @@ const contactCardDetails = datas.map((data) => {
   para.innerHTML = `<span> ${data.partnerId}</span> | <span>${data.mobile} </span>`;
   const status = document.createElement("h5");
   status.innerText = data.status;
-
+  statusRound.classList.add("green-status");
   //appending children to parent nodes
   contactCard.appendChild(title);
   contactCard.appendChild(para);
@@ -115,4 +116,21 @@ const contactCardDetails = datas.map((data) => {
 
     detailsStatus.innerText = contactCard.children[2].textContent;
   });
+});
+
+//mobile dropdown
+
+const partnerDropdown = document.querySelector(".partners-btn");
+const sectionToBeDisplayed = document.querySelector(".side-section-content");
+partnerDropdown.addEventListener("click", () => {
+  sectionToBeDisplayed.classList.toggle("active");
+});
+
+//nav-hamburger
+
+const hamburger = document.querySelector(".hamburger");
+const sideReveal = document.querySelector(".nav-mob-items");
+hamburger.addEventListener("click", () => {
+  console.log("clicked");
+  sideReveal.classList.toggle("active");
 });

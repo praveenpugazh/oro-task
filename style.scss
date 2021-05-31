@@ -55,7 +55,12 @@ body{
     cursor: pointer;
     font-size: 0.9rem;
 }
-
+.nav-mobile{
+    display: none;
+}
+.hamburger{
+    display: none;
+}
 //Main 
 
 .hero{
@@ -110,21 +115,30 @@ body{
 .single-contact-card.active {
     background-color:#FFF7EA;
 }
-
+.green-status{
+    width: 5px;
+    height: 5px;
+    background-color: green;
+    border-radius: 50%;
+}
 
 //Main section
-
+#map{
+    width:88%;
+    height: 300px;
+}
 .main-section{
     min-height: 90vh;
-    flex:8 1 800px;
+    flex:8 1 900px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    
+    flex-wrap: wrap;    
 }
+
 .partner-details{
-    min-width:1150px;
+    width:88%;
 
     h2{
         font-size: 1.2rem;
@@ -145,7 +159,7 @@ body{
     align-items: center;
     justify-content: space-around;
     flex-wrap: wrap;
-    width: 700px;
+    width: 60%;
 
     span{
         color:rgb(104, 104, 104);
@@ -161,9 +175,9 @@ body{
     padding: 0.4rem 0.8rem;
     cursor: pointer;
 }
-
+//maps card
 .stops-section{
-    width: 1150px;
+    width:88%;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1rem;
@@ -186,12 +200,153 @@ body{
 }
 
 
-
-
 //Responsive styling
+@media screen and (max-width:986px){
+    .partner-card{
+        display: flex;
+        flex-direction: column;
+    }
+    .card{
+        display: flex;
+        flex-direction: column;
+    }
+}
+@media screen and (max-width:526px) {
+    .nav-bar{
+        display: none;
+    }
+    .nav-items{
+        display: none;
+    }
 
-@media screen and (max-width:686px) {
-    // .nav-btn{
-    //     display:none;
-    // }
+    .hamburger{
+        display: flex;
+        flex-direction: column;
+        z-index: 1000000000;
+        cursor: pointer;
+        span{
+            width: 20px;
+            height: 3px;
+            margin: 2px;
+            background-color: black;
+        }
+    }
+    .nav-mobile{
+        width: 95%;
+        margin: auto;
+     min-height: 7vh;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        
+    }
+    .nav-mob-logo{
+        img{
+            margin:0px 30px;
+            width: 64px;
+        }
+    }
+    .nav-mob-items{
+        position: absolute;
+        top:0;
+        left: 0;
+        background-color: white;
+        z-index: 999999;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        height: 100vh;
+        width: 250px;
+        transform: translateX(-100%);
+        padding-left: 30px;
+        padding-top: 55px;
+        transition: transform 0.4s ease-in-out;
+    }
+    .nav-mob-items.active{
+        transform: translateX(0);
+    }
+    .nav-ul{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 90%;
+        
+        li{
+            padding-top: 10px;
+            width: 100%;
+            border-bottom: 1px solid rgb(177, 177, 177);
+        }
+    }
+    .call-btn{
+        font-size: 0.6rem;
+        padding: 0.3rem 0.6rem;
+    }
+    .stops-section{
+        width: 95%;
+        margin: auto;
+        display: grid;
+        grid-template-columns: auto;
+        
+        .stop{
+            span,p{
+
+                font-size: 0.8rem;
+            }
+        }
+    }
+    .main-section{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-around;
+
+        
+    }
+    .partner-details{
+        width: 95%;
+        height: auto;  
+        
+        h2{
+            padding-left: 10px;
+        }
+    }
+  
+    .partner-card{
+        width: 95%;
+        margin: auto;
+        height: auto;
+
+        .cards{
+            display: grid;
+            grid-template-columns: auto auto;
+            grid-gap: 10px;
+            width: 95%;
+            align-items: flex-start;
+
+            span,p{
+                font-size: 0.8rem;
+            }
+        }
+        .partner-call{
+            display: none;
+        }
+    }
+    #map{
+        width: 95%;
+        margin: auto;
+        height: 250px;
+    }
+    .side-section-content{
+        position: absolute;
+        transform: translateY(-200%);
+        transition: transform 0.8s ease-in-out;
+    }
+    .side-section-content.active{
+        width: 100%;
+        height: 100%;
+        z-index: 9999;
+        transform: translateY(0);
+    }
 }

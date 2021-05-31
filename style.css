@@ -78,6 +78,14 @@ body {
   font-size: 0.9rem;
 }
 
+.nav-mobile {
+  display: none;
+}
+
+.hamburger {
+  display: none;
+}
+
 .hero {
   min-height: 90vh;
   display: -webkit-box;
@@ -152,11 +160,23 @@ body {
   background-color: #FFF7EA;
 }
 
+.green-status {
+  width: 5px;
+  height: 5px;
+  background-color: green;
+  border-radius: 50%;
+}
+
+#map {
+  width: 88%;
+  height: 300px;
+}
+
 .main-section {
   min-height: 90vh;
   -webkit-box-flex: 8;
-      -ms-flex: 8 1 800px;
-          flex: 8 1 800px;
+      -ms-flex: 8 1 900px;
+          flex: 8 1 900px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -169,10 +189,12 @@ body {
           align-items: center;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .partner-details {
-  min-width: 1150px;
+  width: 88%;
 }
 
 .partner-details h2 {
@@ -206,7 +228,7 @@ body {
       justify-content: space-around;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  width: 700px;
+  width: 60%;
 }
 
 .cards span {
@@ -224,7 +246,7 @@ body {
 }
 
 .stops-section {
-  width: 1150px;
+  width: 88%;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 1fr;
@@ -252,5 +274,202 @@ body {
 .card-part span {
   font-size: 0.8rem;
   color: #686868;
+}
+
+@media screen and (max-width: 986px) {
+  .partner-card {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .card {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 526px) {
+  .nav-bar {
+    display: none;
+  }
+  .nav-items {
+    display: none;
+  }
+  .hamburger {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    z-index: 1000000000;
+    cursor: pointer;
+  }
+  .hamburger span {
+    width: 20px;
+    height: 3px;
+    margin: 2px;
+    background-color: black;
+  }
+  .nav-mobile {
+    width: 95%;
+    margin: auto;
+    min-height: 7vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .nav-mob-logo img {
+    margin: 0px 30px;
+    width: 64px;
+  }
+  .nav-mob-items {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: white;
+    z-index: 999999;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    height: 100vh;
+    width: 250px;
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+    padding-left: 30px;
+    padding-top: 55px;
+    -webkit-transition: -webkit-transform 0.4s ease-in-out;
+    transition: -webkit-transform 0.4s ease-in-out;
+    transition: transform 0.4s ease-in-out;
+    transition: transform 0.4s ease-in-out, -webkit-transform 0.4s ease-in-out;
+  }
+  .nav-mob-items.active {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  .nav-ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    width: 90%;
+  }
+  .nav-ul li {
+    padding-top: 10px;
+    width: 100%;
+    border-bottom: 1px solid #b1b1b1;
+  }
+  .call-btn {
+    font-size: 0.6rem;
+    padding: 0.3rem 0.6rem;
+  }
+  .stops-section {
+    width: 95%;
+    margin: auto;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: auto;
+        grid-template-columns: auto;
+  }
+  .stops-section .stop span, .stops-section .stop p {
+    font-size: 0.8rem;
+  }
+  .main-section {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .partner-details {
+    width: 95%;
+    height: auto;
+  }
+  .partner-details h2 {
+    padding-left: 10px;
+  }
+  .partner-card {
+    width: 95%;
+    margin: auto;
+    height: auto;
+  }
+  .partner-card .cards {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: auto auto;
+        grid-template-columns: auto auto;
+    grid-gap: 10px;
+    width: 95%;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .partner-card .cards span, .partner-card .cards p {
+    font-size: 0.8rem;
+  }
+  .partner-card .partner-call {
+    display: none;
+  }
+  #map {
+    width: 95%;
+    margin: auto;
+    height: 250px;
+  }
+  .side-section-content {
+    position: absolute;
+    -webkit-transform: translateY(-200%);
+            transform: translateY(-200%);
+    -webkit-transition: -webkit-transform 0.8s ease-in-out;
+    transition: -webkit-transform 0.8s ease-in-out;
+    transition: transform 0.8s ease-in-out;
+    transition: transform 0.8s ease-in-out, -webkit-transform 0.8s ease-in-out;
+  }
+  .side-section-content.active {
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
 }
 /*# sourceMappingURL=style.css.map */

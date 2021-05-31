@@ -35,6 +35,28 @@
           </ul>
         </div>
       </nav>
+      <div class="nav-mobile">
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="nav-mob-logo">
+          <a href="/"><img src="./assets/logo.png" alt="company-logo" /></a>
+        </div>
+        <div class="nav-mob-cta">
+          <button class="call-btn partners-btn">All Partners</button>
+        </div>
+        <div class="nav-mob-items">
+          <ul class="nav-ul">
+            <li>
+              <p>Logged in as</p>
+            </li>
+            <li><span>dev@orocorp.in</span></li>
+            <li><a>Logout</a></li>
+          </ul>
+        </div>
+      </div>
     </section>
     <!-- Entire-Page -->
     <main class="hero">
@@ -73,16 +95,9 @@
             </div>
           </div>
         </div>
-        <div class="maps-section">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1681.9945121136996!2d80.16351420188936!3d13.061527183597171!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1622285687874!5m2!1sen!2sin"
-            width="1150"
-            height="300"
-            style="border: 0"
-            allowfullscreen=""
-            loading="lazy"
-          ></iframe>
-        </div>
+
+        <div id="map"></div>
+
         <div class="stops-section">
           <div class="card-part">
             <div class="stop">
@@ -160,5 +175,29 @@
       </section>
     </main>
     <script src="app.js"></script>
+    <script>
+      function initMap() {
+        var options = {
+          zoom: 12,
+          center: { lat: 13.0656, lng: 80.1608 },
+        };
+        map = new google.maps.Map(document.getElementById("map"), options);
+
+        addMarker({ lat: 13.0656, lng: 80.1608 });
+        function addMarker(coords) {
+          var marker = new google.maps.Marker({
+            position: coords,
+            map: map,
+            icon: "https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png",
+          });
+        }
+      }
+    </script>
+    <script
+      async
+      defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCXQ70RpIML3s1sJpj2qlVmDEFTiL1A2HI&callback=initMap"
+      async
+    ></script>
   </body>
 </html>
