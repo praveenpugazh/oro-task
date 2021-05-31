@@ -161,9 +161,26 @@ body {
 }
 
 .green-status {
+  display: inline-block;
   width: 5px;
   height: 5px;
-  background-color: green;
+  background-color: #16A085;
+  border-radius: 50%;
+}
+
+.yellow-status {
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  background-color: #F0B859;
+  border-radius: 50%;
+}
+
+.red-status {
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  background-color: #CF2121;
   border-radius: 50%;
 }
 

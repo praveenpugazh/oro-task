@@ -76,8 +76,15 @@ const contactCardDetails = datas.map((data) => {
   const para = document.createElement("p");
   para.innerHTML = `<span> ${data.partnerId}</span> | <span>${data.mobile} </span>`;
   const status = document.createElement("h5");
-  status.innerText = data.status;
   statusRound.classList.add("green-status");
+  if (data.active === "green") {
+    status.innerHTML = `<span class="green-status"></span> ${data.status}`;
+  } else if (data.active === "yellow") {
+    status.innerHTML = `<span class="yellow-status"></span> ${data.status}`;
+  } else {
+    status.innerHTML = `<span class="red-status"></span> ${data.status}`;
+  }
+
   //appending children to parent nodes
   contactCard.appendChild(title);
   contactCard.appendChild(para);
@@ -86,7 +93,7 @@ const contactCardDetails = datas.map((data) => {
   contactCardParent.appendChild(arrowDiv);
   sideSection.appendChild(contactCardParent);
 
-  contactCardParent.addEventListener("click", (e) => {
+  contactCardParent.addEventListener("click", () => {
     sideSection.childNodes.forEach((child) => {
       if (child.nodeType === 1) {
         if (child.classList.contains("active")) {
@@ -99,7 +106,6 @@ const contactCardDetails = datas.map((data) => {
     const detailsStatus = document.querySelector(".status-card");
     const detailsMobile = document.querySelector(".mobile-card");
     contactCardParent.classList.toggle("active");
-    console.log(contactCard);
 
     detailsName.innerText = contactCard.children[0].textContent;
     let idTrim = contactCard.children[1].textContent;
@@ -113,8 +119,8 @@ const contactCardDetails = datas.map((data) => {
 
     detailsId.innerText = idTrim;
     detailsMobile.innerText = mobileTrim;
-
-    detailsStatus.innerText = contactCard.children[2].textContent;
+    detailsStatus.innerHTML = contactCard.children[2].innerHTML;
+    console.log(contactCard.children[2]);
   });
 });
 

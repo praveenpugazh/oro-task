@@ -95,9 +95,8 @@
             </div>
           </div>
         </div>
-
+        <!-- Google Maps -->
         <div id="map"></div>
-
         <div class="stops-section">
           <div class="card-part">
             <div class="stop">
@@ -184,6 +183,9 @@
         map = new google.maps.Map(document.getElementById("map"), options);
 
         addMarker({ lat: 13.0656, lng: 80.1608 });
+        addMarker({ lat: 13.0756, lng: 80.2608 });
+        addMarker({ lat: 13.078, lng: 80.208 });
+        addMarker({ lat: 13.08, lng: 80.08 });
         function addMarker(coords) {
           var marker = new google.maps.Marker({
             position: coords,
